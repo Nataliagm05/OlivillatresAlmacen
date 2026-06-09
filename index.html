@@ -6,7 +6,6 @@
     <title>Almacen Olivilla tres S.L.U</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
     <style>
@@ -17,86 +16,283 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* Asegura que el footer se quede abajo */
         html, body {
             height: 100%;
         }
 
         body {
-            /* Fondo claro para que resalten los nuevos tonos corporativos */
-            background-color: #f7f9fa; 
-            color: #4a3b68; /* Violeta oscuro para el texto principal */
+            background-color: #f7f9fa;
+            color: #4a3b68;
             line-height: 1.6;
             display: flex;
             flex-direction: column;
         }
 
-        /* --- PERSONALIZACIÓN DEL NAVBAR BOOTSTRAP --- */
+        /* ========== TOPBAR ========== */
+        .topbar {
+            background-color: #35284f;
+            padding: 6px 30px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .topbar a,
+        .topbar span {
+            color: #c9b8e8;
+            font-size: 0.78rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .topbar a:hover {
+            color: #f386cc;
+        }
+
+        .topbar .topbar-divider {
+            width: 1px;
+            height: 12px;
+            background-color: #5a4878;
+        }
+
+        /* ========== NAVBAR PRINCIPAL ========== */
         .navbar-custom {
-            background-color: #4a3b68 !important; /* Fondo violeta oscuro */
-            padding: 10px 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra suave inferior */
+            background-color: #4a3b68;
+            padding: 0 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(74, 59, 104, 0.25);
         }
 
-        /* Ajuste del enlace base para que se adapte bien en móviles */
+        .navbar-custom .container-fluid {
+            padding: 0;
+        }
+
+        /* Logo */
+        .logo-empresa {
+            height: 72px;
+            width: auto;
+            display: block;
+            border-radius: 4px;
+            transition: opacity 0.2s;
+        }
+
+        .logo-empresa:hover {
+            opacity: 0.88;
+        }
+
+        /* Nav items wrapper */
+        .navbar-custom .navbar-nav {
+            gap: 2px;
+        }
+
+        /* Cada ítem */
+        .navbar-custom .nav-item {
+            position: relative;
+        }
+
+        /* Links */
         .navbar-custom .nav-link {
-            color: #f7f9fa !important;
+            color: #dcd6e8 !important;
             font-weight: 500;
-            font-size: 20px;
-            padding: 10px 15px !important; /* Margen interno cómodo para móviles */
-            transition: color 0.3s ease;
+            font-size: 0.93rem;
+            letter-spacing: 0.02em;
+            padding: 24px 16px !important;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            border-bottom: 3px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+            white-space: nowrap;
         }
 
-        /* MEDIAS QUERIES: Esto aplica los márgenes grandes SÓLO en pantallas grandes (PC). 
-           En pantallas pequeñas (móviles) se ignorará este margen de 25px para evitar que se descuadre.
-        */
-        @media (min-width: 992px) {
-            .navbar-custom .nav-link {
-                margin-left: 25px;   /* Separación elegante entre palabras en PC */
-                margin-right: 25px;
-            }
+        .navbar-custom .nav-link i {
+            font-size: 0.85rem;
+            opacity: 0.75;
         }
 
-        /* Color al pasar el ratón o estar activo (Magenta corporativo) */
         .navbar-custom .nav-link:hover,
-        .navbar-custom .nav-link:focus {
-            color: #b52a7c !important;
+        .navbar-custom .nav-link.active {
+            color: #ffffff !important;
+            border-bottom-color: #b53987;
         }
 
-        /* --- BOTÓN HAMBURGUESA EN MAGENTA (MÓVIL) --- */
-        .navbar-custom .navbar-toggler {
-            border-color: #b53987 !important; 
+        .navbar-custom .nav-link.active {
+            color: #f8c8e8 !important;
         }
 
-        /* Cambia las 3 rayas interiores inyectando el color magenta en el SVG */
-        .navbar-custom .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23b53987' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        /* Dropdown toggle arrow */
+        .navbar-custom .nav-link.dropdown-toggle::after {
+            border: none;
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            content: '\f107';
+            font-size: 0.7rem;
+            margin-left: 2px;
+            vertical-align: middle;
+            transition: transform 0.25s;
         }
 
-        /* Estilos para el menú desplegable de Servicios */
+        .navbar-custom .nav-item.show .nav-link.dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+
+        /* ========== DROPDOWN MENU ========== */
         .navbar-custom .dropdown-menu {
-            border-radius: 8px;
-            border: 1px solid rgba(74, 59, 104, 0.1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            background-color: #ffffff;
+            border: none;
+            border-top: 3px solid #b53987;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 12px 32px rgba(74, 59, 104, 0.18);
+            padding: 10px 0;
+            min-width: 240px;
+            animation: dropFade 0.18s ease;
+        }
+
+        @keyframes dropFade {
+            from { opacity: 0; transform: translateY(-6px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         .navbar-custom .dropdown-item {
             color: #4a3b68;
+            font-size: 0.9rem;
             font-weight: 500;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background 0.15s, color 0.15s, padding-left 0.15s;
+        }
+
+        .navbar-custom .dropdown-item i {
+            width: 18px;
+            text-align: center;
+            color: #b53987;
+            font-size: 0.88rem;
         }
 
         .navbar-custom .dropdown-item:hover {
-            background-color: #f7f9fa;
-            color: #b52a7c;
+            background-color: #f7f0f5;
+            color: #b53987;
+            padding-left: 26px;
         }
 
-        .logo-empresa {
-            max-width: 150px;
-            height: auto;
-            border-radius: 4px;
+        .navbar-custom .dropdown-divider {
+            border-color: #ede5f5;
+            margin: 6px 16px;
         }
 
-        /* --- CONTENEDOR PRINCIPAL --- */
+        /* Etiqueta badge en dropdown */
+        .dropdown-item .badge-new {
+            background-color: #b53987;
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 600;
+            padding: 2px 7px;
+            border-radius: 20px;
+            margin-left: auto;
+            letter-spacing: 0.04em;
+        }
+
+        /* ========== CTA BUTTON ========== */
+        .btn-presupuesto {
+            background-color: #b53987;
+            color: #ffffff !important;
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 9px 20px !important;
+            border-radius: 6px;
+            border: none;
+            border-bottom: 3px solid transparent !important;
+            letter-spacing: 0.03em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s, transform 0.15s;
+            white-space: nowrap;
+            margin-left: 12px;
+        }
+
+        .btn-presupuesto:hover {
+            background-color: #971f6b;
+            color: #fff !important;
+            transform: translateY(-1px);
+        }
+
+        /* ========== TOGGLER MÓVIL ========== */
+        .navbar-custom .navbar-toggler {
+            border: 1.5px solid #b53987;
+            padding: 6px 10px;
+            border-radius: 6px;
+        }
+
+        .navbar-custom .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23b53987' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        }
+
+        /* ========== MOBILE adaptaciones ========== */
+        @media (max-width: 991px) {
+            .topbar { display: none; }
+
+            .navbar-custom {
+                padding: 0 16px;
+            }
+
+            .navbar-custom .navbar-collapse {
+                background-color: #3d2f5e;
+                border-radius: 0 0 10px 10px;
+                padding: 10px 0 16px;
+                margin: 0 -16px;
+            }
+
+            .navbar-custom .nav-link {
+                padding: 12px 20px !important;
+                border-bottom: none;
+                border-left: 3px solid transparent;
+            }
+
+            .navbar-custom .nav-link:hover,
+            .navbar-custom .nav-link.active {
+                border-left-color: #b53987;
+                border-bottom-color: transparent;
+                background-color: rgba(181, 57, 135, 0.08);
+            }
+
+            .navbar-custom .dropdown-menu {
+                background-color: #2e2248;
+                border-top: none;
+                border-left: 3px solid #b53987;
+                border-radius: 0;
+                box-shadow: none;
+                margin-left: 20px;
+                padding: 4px 0;
+                animation: none;
+            }
+
+            .navbar-custom .dropdown-item {
+                color: #c9b8e8;
+                padding: 10px 16px;
+            }
+
+            .navbar-custom .dropdown-item:hover {
+                background-color: rgba(181, 57, 135, 0.15);
+                color: #f386cc;
+                padding-left: 22px;
+            }
+
+            .btn-presupuesto {
+                margin: 12px 20px 4px;
+                justify-content: center;
+            }
+        }
+
+        /* ========== RESTO DE ESTILOS (sin cambios) ========== */
         .container-custom {
             max-width: 900px;
             margin: 40px auto;
@@ -104,30 +300,27 @@
             flex: 1;
         }
 
-        /* --- SECCIÓN PRESENTACIÓN --- */
         .presentacion {
-            /* Fondo violeta suave/claro para la tarjeta */
-            background: #f0ebf7; 
+            background: #f0ebf7;
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(74, 59, 104, 0.08);
             margin-bottom: 40px;
-            border-left: 5px solid #b53987; /* Detalle en rosa magenta */
+            border-left: 5px solid #b53987;
         }
 
         .presentacion h1 {
-            color: #b53987; /* Rosa magenta del logo */
+            color: #b53987;
             margin-bottom: 15px;
             font-size: 2rem;
         }
 
         .presentacion p {
-            color: #4a3b68; /* Violeta oscuro */
+            color: #4a3b68;
             font-size: 1.1rem;
             margin-bottom: 10px;
         }
 
-        /* Contenedor del vídeo de OliviBot */
         .contenedor-video {
             margin-top: 25px;
             width: 100%;
@@ -137,27 +330,25 @@
 
         .video-empresa {
             width: 100%;
-            max-width: 320px; 
+            max-width: 320px;
             max-height: 400px;
             border-radius: 12px;
             box-shadow: 0 6px 16px rgba(74, 59, 104, 0.2);
-            border: 2px solid #b53987; /* Borde rosa magenta */
+            border: 2px solid #b53987;
         }
 
-        /* --- SECCIÓN PROVEEDORES --- */
         .seccion-proveedores {
             text-align: center;
         }
 
         .seccion-proveedores h2 {
-            color: #4a3b68; /* Título en violeta oscuro */
+            color: #4a3b68;
             margin-bottom: 25px;
             font-size: 1.8rem;
             position: relative;
             display: inline-block;
         }
 
-        /* Línea decorativa con el color rosa magenta del logo */
         .seccion-proveedores h2::after {
             content: '';
             display: block;
@@ -168,7 +359,6 @@
             border-radius: 2px;
         }
 
-        /* Contenedor de los botones */
         .grid-proveedores {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -176,33 +366,31 @@
             margin-top: 10px;
         }
 
-        /* Estilo de los botones */
         .boton-proveedor {
             display: block;
-            background: #ffffff; 
-            color: #4a3b68; 
+            background: #ffffff;
+            color: #4a3b68;
             text-decoration: none;
             padding: 20px;
             font-size: 1.2rem;
             font-weight: bold;
-            border: 2px solid #4a3b68; 
+            border: 2px solid #4a3b68;
             border-radius: 8px;
             transition: all 0.3s ease;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        /* Efecto Hover: cambia al rosa magenta del logo */
         .boton-proveedor:hover {
-            background-color: #b53987; 
-            color: #ffffff; 
+            background-color: #b53987;
+            color: #ffffff;
             border-color: #b53987;
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(181, 57, 135, 0.25);
         }
 
-        /* --- FOOTER --- */
+        /* ========== FOOTER ========== */
         .Contacto {
-            background-color: #4a3b68; 
+            background-color: #4a3b68;
             color: #ffffff;
             padding: 20px;
             text-align: center;
@@ -216,7 +404,7 @@
         }
 
         .Contacto a {
-            color: #f386cc; 
+            color: #f386cc;
             text-decoration: none;
             font-weight: bold;
         }
@@ -224,11 +412,11 @@
         .Contacto a:hover {
             text-decoration: underline;
         }
-        
+
         .Contacto .grupo-2 {
-            background-color: #35284f; /* Un violeta aún más oscuro para el cierre */
+            background-color: #35284f;
             padding: 15px 10px;
-            margin: 20px -20px -20px -20px; /* Expande el fondo al total del contenedor */
+            margin: 20px -20px -20px -20px;
             text-align: center;
             color: #dcd6e8;
         }
@@ -236,55 +424,95 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-custom border-bottom">
+    <!-- ===== TOPBAR ===== -->
+    <div class="topbar">
+        <span><i class="fa-solid fa-location-dot"></i> Calle Rio Valdecelada, 7 — Toledo</span>
+        <div class="topbar-divider"></div>
+        <a href="tel:925233454"><i class="fa-solid fa-phone"></i> 925 23 34 54</a>
+        <div class="topbar-divider"></div>
+        <a href="mailto:almacen@olivillatres.com"><i class="fa-solid fa-envelope"></i> almacen@olivillatres.com</a>
+    </div>
+
+    <!-- ===== NAVBAR PRINCIPAL ===== -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
-            <a class="navbar-brand d-flex" href="./index.html">
-                <img src="logonuevo2.png" class="logo-empresa" alt="Logo de Aislamientos Olivilla Tres">
+
+            <a class="navbar-brand" href="./index.html">
+                <img src="logonuevo2.png" class="logo-empresa" alt="Logo Aislamientos Olivilla Tres">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color:#b53987; ">
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarPrincipal"
+                aria-controls="navbarPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menú">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+            <div class="collapse navbar-collapse" id="navbarPrincipal">
+                <ul class="navbar-nav mx-auto align-items-lg-stretch">
+
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./index.html">
-                            <i class="fa-solid fa-house me-1"></i>Inicio
+                        <a class="nav-link active" href="./index.html">
+                            <i class="fa-solid fa-house"></i> Inicio
                         </a>
                     </li>
-                    
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-trowel-bricks me-1"></i>Servicios
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-trowel-bricks"></i> Servicios
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#termico"><i class="fa-solid fa-snowflake me-1"></i>Aislamiento Térmico</a></li>
-                            <li><a class="dropdown-item" href="#acustico"><i class="fa-solid fa-volume-xmark me-1"></i>Aislamiento Acústico</a></li>
+                            <li>
+                                <a class="dropdown-item" href="./index.html#termico">
+                                    <i class="fa-solid fa-snowflake"></i>
+                                    Aislamiento Térmico
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./index.html#acustico">
+                                    <i class="fa-solid fa-volume-xmark"></i>
+                                    Aislamiento Acústico
+                                </a>
+                            </li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#todos"><i class="fa-solid fa-list me-1"></i>Todos los servicios</a></li>
+                            <li>
+                                <a class="dropdown-item" href="./index.html#todos">
+                                    <i class="fa-solid fa-list"></i>
+                                    Todos los servicios
+                                    <span class="badge-new">Ver todo</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#nosotros"><i class="fa-solid fa-building me-1"></i>Nosotros</a>
+                        <a class="nav-link" href="./index.html#nosotros">
+                            <i class="fa-solid fa-building"></i> Nosotros
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto"><i class="fa-solid fa-phone me-1"></i>Contacto</a>
-                    </li>
+
+
                 </ul>
+
+                <!-- CTA Presupuesto -->
+                <a href="./index.html#contacto" class="nav-link btn-presupuesto">
+                    <i class="fa-solid fa-file-invoice"></i> Solicitar presupuesto
+                </a>
             </div>
         </div>
     </nav>
 
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
     <div class="container-custom">
-        
+
         <section class="presentacion">
             <h1>Bienvenido a AISLAMIENTOS OLIVILLA TRES</h1>
             <p>Aquí puedes poner una breve descripción de tu empresa y su misión. Explica a los usuarios el propósito de este espacio.</p>
             <p>Esta página web ha sido diseñada específicamente para organizar y gestionar nuestros productos según sus respectivos proveedores de forma centralizada, rápida y eficiente.</p>
-            
+
             <div class="contenedor-video">
                 <video src="video_presentacion.mp4" autoplay muted controls class="video-empresa">
                     Tu navegador no soporta la reproducción de vídeos.
@@ -294,17 +522,18 @@
 
         <section class="seccion-proveedores">
             <h2>Nuestros Proveedores</h2>
-            
+
             <div class="grid-proveedores">
-                <a href="proveedor_a.html" class="boton-proveedor">Sika</a>
-                <a href="proveedor_b.html" class="boton-proveedor">Bostik</a>
-                <a href="proveedor_c.html" class="boton-proveedor">Grupopuma</a>
+                <a href="sika.html" class="boton-proveedor">Sika</a>
+                <a href="bostik.html" class="boton-proveedor">Bostik</a>
+                <a href="Grupopuma.html" class="boton-proveedor">Grupopuma</a>
                 <a href="proveedor_d.html" class="boton-proveedor">Proveedor D</a>
             </div>
         </section>
 
     </div>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="Contacto">
         <p><strong>Calle Rio Valdecelada, 7</strong></p>
         <p>45007 - Toledo</p>
@@ -321,17 +550,17 @@
 
     <script type="text/javascript">
         (function(d, t) {
-        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        v.onload = function() {
-            window.voiceflow.chat.load({
-                verify: { projectID: '6a26a29ec4acdd8a282fd8bf' },
-                url: 'https://general-runtime.voiceflow.com',
-                voice: {
-                    url: "https://runtime-api.voiceflow.com"
-                }
-            });
-        }
-        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+                window.voiceflow.chat.load({
+                    verify: { projectID: '6a26a29ec4acdd8a282fd8bf' },
+                    url: 'https://general-runtime.voiceflow.com',
+                    voice: { url: "https://runtime-api.voiceflow.com" }
+                });
+            }
+            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+            v.type = "text/javascript";
+            s.parentNode.insertBefore(v, s);
         })(document, 'script');
     </script>
 </body>
