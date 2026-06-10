@@ -285,30 +285,49 @@
             padding-left: 15px;
         }
 
-        .seccion-carrusel {
+
+        /* ========== NUEVA SECCIÓN DE IMÁGENES DESTACADAS ========== */
+        .seccion-destacados {
             margin-bottom: 50px;
         }
 
-        .carousel-inner {
+        .card-destacado {
+            border: none;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(74, 59, 104, 0.15);
             background-color: #4a3b68;
+            overflow: hidden;
+            height: 100%;
         }
 
-        .carousel-item img {
+        .card-destacado img {
             width: 100%;
-            height: auto;
-            max-height: 500px;
-            object-fit: contain;
+            height: 250px;
+            object-fit: cover;
             background-color: #4a3b68;
         }
 
-        .carousel-caption {
-            background: rgba(74, 59, 104, 0.8);
-            border-radius: 8px;
+        .card-destacado .card-body {
+            background: rgba(74, 59, 104, 0.95);
+            color: #ffffff;
             padding: 15px;
         }
 
+        .card-destacado .card-title {
+            color: #f386cc;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .card-destacado .card-text {
+            font-size: 0.9rem;
+            color: #dcd6e8;
+            margin: 0;
+        }
+
+        /* ========== FIN NUEVA SECCIÓN DE IMÁGENES DESTACADAS ========== */
+        
         .seccion-productos h2 {
             color: #4a3b68;
             margin-bottom: 25px;
@@ -395,6 +414,10 @@
             text-decoration: underline;
         }
 
+        h3 {
+            margin: 20px;
+        }
+
         .Contacto {
             background-color: #4a3b68;
             color: #ffffff;
@@ -428,6 +451,7 @@
         }
     </style>
 </head>
+
 
 <body>
 
@@ -564,76 +588,510 @@
                 Productos de Pladur
             </h1>
 
-            <section class="seccion-carrusel">
-                <div id="carruselProductos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    </div>
+            <section class="seccion-destacados">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
 
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                    <div class="col">
+                        <div class="card card-destacado">
                             <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/Bostik-spain-productimage-p925-fijacion-turbo-640x480.jpg"
-                                class="d-block w-100" alt="Producto 1">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>P925 Poliespuma Fijación Turbo</h5>
-                                <p>Adhesivo de espuma de poliuretano de fijación rápida.</p>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-msp-turbo-640x480.jpg"
-                                class="d-block w-100" alt="Producto 2">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>MSP Turbo</h5>
-                                <p>Adhesivo de montaje y sellador MSP de alto agarre inmediato.</p>
+                                alt="Producto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">P925 Poliespuma</h5>
+                                <p class="card-text">Adhesivo de espuma de poliuretano de fijación rápida.</p>
                             </div>
                         </div>
                     </div>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carruselProductos"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carruselProductos"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
+                    <div class="col">
+                        <div class="card card-destacado">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-msp-turbo-640x480.jpg"
+                                alt="Producto 2">
+                            <div class="card-body">
+                                <h5 class="card-title">MSP Turbo</h5>
+                                <p class="card-text">Adhesivo de montaje y sellador MSP de alto agarre inmediato.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card card-destacado">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/Bostik-spain-productimage-p925-fijacion-turbo-640x480.jpg"
+                                alt="Producto 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Placas Pladur</h5>
+                                <p class="card-text">Sistemas de tabiquería seca y techos continuos de alta calidad.</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
-
             <section class="seccion-productos">
-                <h2>Catálogo Completo (A-Z)</h2>
-                <h3>Terra Base</h3>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <h2>Catálogo Completo</h2>
+                <h3>Placa N Estándar 13 mm</h3>
 
-                    <div class="col">
-                        <div class="card card-producto">
-                            <img src="https://tripomant.com/wp-content/uploads/2023/04/tripomant-air.jpg"
-                                class="card-img-top" alt="Tripomant Air">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Tripomant Air</h5>
-                                <p class="card-text text-muted small">Aislante térmico reflexivo encolado. Compuesto por
-                                    dos láminas de aluminio y una de burbuja de polietileno.</p>
-
-                            </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Estándar 13 mm: 2 x 1.2</h5>
                         </div>
                     </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Estándar 13 mm: 2.5 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Estándar 13 mm: 2.7 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="col">
-                        <div class="card card-producto">
-                            <img src="https://tripomant.com/wp-content/uploads/2023/04/Union5B.jpg" class="card-img-top"
-                                alt="Tripomant GR">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Tripomant GR</h5>
-                                <p class="card-text text-muted small">Compuesto multicapa formado por dos laminas
-                                    aluminizadas y dos espumas protectoras.</p>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Estándar 13 mm: 2.8 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
 
-                            </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Estándar 13 mm: 2.9 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Estándar 13 mm: 3 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Placa N Estándar 15 mm</h3>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Estándar 15 mm: 2 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Estándar 15 mm: 2.5 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Estándar 15 mm: 2.7 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Estándar 15 mm: 2.8 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Estándar 15 mm: 2.9 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Estándar 15 mm: 3 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Placa H1 Verde</h3>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa H1 Verde 13 mm: 2 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa H1 Verde 13 mm: 2.5 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa H1 Verde 13 mm: 3 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa H1 Verde 15 mm: 3 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa H1 Verde 15 mm: 2.5 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa H1 Verde 15 mm: 2 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Otros Modelos de Placas</h3>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Omnia 13 mm: 3 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Omnia 15 mm: 3 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Ultra L-TEC 13 mm: 2 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Synia STD-4BA 13 mm: 2 x 1.2</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Decor Vinílica de 60 x 60</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Placa Decor Vinílica de 1.20 x 60</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3>Monantes</h3>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Monante 48/35 Z1 3 m</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Monante 48/35 Z1 2.5 m</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Monante 70/35 Z1 3 m</h5>
+                        </div>
+                    </div>
+                </div>
+                <h3>Canales</h3>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Canal 48/30 Z1 3 mt</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Canal 70/30 Z1 3 mt</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Maestra de 82 x 16 A 3 mts</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Perfil Techo PH 45 x 4 mt</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Perfil Techo T-45 a 3 mts</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Horquilla T-45 (100 unidades)</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pieza Empalme T-45 (100 unidades)</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Angular L30 a 3mts</h5>
+                        </div>
+                    </div>
+                </div>
+                <h3>Tornillos</h3>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tornillo PM 3.5 x 25 caja (1000 unidades)</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tornillo PM 3.5 x 35 caja (1000 unidades)</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tornillo PM 3.5 x 45 caja (1000 unidades)</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tornillo PM 3.9 x 35 caja (1000 unidades)</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tornillo MM 3.5 x 9.5 caja (1000 unidades)</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tornillo PB 25 caja (500 unidades)</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tornillo MM 25 caja (1000 unidades)</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tornillo PB Broca 3.5 x 25</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tornillo PMA 4.8 X 35 Madera</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Pastas</h3>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pasta Agarre Sacos 20kg</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pasta Junta Normal Sacos 18kg</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pasta Juntas 1H Sacos 20kg</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pasta Juntas 1H Sacos 10kg</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pasta Juntas 2H Sacos 20kg</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pasta Juntas al uso 7kg</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pasta Juntas al uso 20kg</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Cintas</h3>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Cinta de Juntas. Rollo 150 mts</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Cinta Guardavivos. Rollo 30 mts</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Cinta de Refuerzo. Rollo 90 mts</h5>
+                        </div>
+                    </div>
+                </div>
+                <h3>Bandas</h3>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Banda Estanca 46. Rollo 30 mts</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Banda Estanca 70. Rollo 30 mts</h5>
+                        </div>
+                    </div>
+                </div>
+                <h3>Trampillas</h3>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Trampilla 20 x 20</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Trampilla 30 x 30</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Trampilla 40 x 40</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-producto">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Trampilla 60 x 60</h5>
                         </div>
                     </div>
                 </div>
