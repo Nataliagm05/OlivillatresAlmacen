@@ -61,7 +61,7 @@
 
 /* ========== NAVBAR OPCIÓN 1: Blanca con acento inferior ========== */
 .navbar-custom {
-    background-color: #ffffff !important;
+    background-color: #4a3b68 !important;
     border-bottom: 3px solid #b53987;
     padding: 0 20px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
@@ -81,6 +81,15 @@
     transition: height 0.2s;
 }
 
+.nav-link.active {
+            color: #ffffff !important;
+            border-bottom-color: #b53987;
+        }
+.navbar-custom .nav-link.active {
+            color: #b53987 !important;
+        }
+
+
 @media (min-width: 992px) {
     .logo-empresa {
         height: 64px;
@@ -98,7 +107,7 @@
 }
 
 .navbar-custom .nav-link {
-    color: #555 !important;
+    color: #dcd6e8 !important;
     font-weight: 400;
     font-size: 14px;
     /* En móvil: padding normal sin el truco del borde inferior */
@@ -106,6 +115,64 @@
     transition: color 0.2s;
     white-space: nowrap;
 }
+
+/* ========== DROPDOWN MENU ========== */
+        .navbar-custom .dropdown-menu {
+            background-color: #ffffff;
+            border: none;
+            border-top: 3px solid #b53987;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 12px 32px rgba(74, 59, 104, 0.18);
+            padding: 10px 0;
+            min-width: 240px;
+            animation: dropFade 0.18s ease;
+        }
+
+        @keyframes dropFade {
+            from { opacity: 0; transform: translateY(-6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .navbar-custom .dropdown-item {
+            color: #4a3b68;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background 0.15s, color 0.15s, padding-left 0.15s;
+        }
+
+        .navbar-custom .dropdown-item i {
+            width: 18px;
+            text-align: center;
+            color: #b53987;
+            font-size: 0.88rem;
+        }
+
+        .navbar-custom .dropdown-item:hover {
+            background-color: #f7f0f5;
+            color: #b53987;
+            padding-left: 26px;
+        }
+
+        .navbar-custom .dropdown-divider {
+            border-color: #ede5f5;
+            margin: 6px 16px;
+        }
+
+        /* Etiqueta badge en dropdown */
+        .dropdown-item .badge-new {
+            background-color: #b53987;
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 600;
+            padding: 2px 7px;
+            border-radius: 20px;
+            margin-left: auto;
+            letter-spacing: 0.04em;
+        }
 
 /* El subrayado inferior solo en escritorio, donde hay espacio */
 @media (min-width: 992px) {
@@ -301,7 +368,7 @@
         <a href="mailto:almacen@olivillatres.com"><i class="fa-solid fa-envelope"></i> almacen@olivillatres.com</a>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-custom">
+<nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
         <a class="navbar-brand" href="./index.html">
             <img src="logonuevo2.png" class="logo-empresa" alt="Logo de Aislamientos Olivilla Tres">
@@ -316,20 +383,37 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-stretch">
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.html">
+                    <a class="nav-link active" href="./index.html">
                         <i class="fa-solid fa-house me-1"></i>Inicio
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-trowel-bricks me-1"></i>Servicios
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="./index.html#termico"><i class="fa-solid fa-snowflake me-1"></i>Aislamiento Térmico</a></li>
-                        <li><a class="dropdown-item" href="./index.html#acustico"><i class="fa-solid fa-volume-xmark me-1"></i>Aislamiento Acústico</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="./index.html#todos"><i class="fa-solid fa-list me-1"></i>Todos los servicios</a></li>
-                    </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-trowel-bricks"></i> Ferretería
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="./index.html#termico">
+                                    <i class="fa-solid fa-snowflake"></i>
+                                    Brochas
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./index.html#acustico">
+                                    <i class="fa-solid fa-volume-xmark"></i>
+                                    Discos
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" href="./index.html#todos">
+                                    <i class="fa-solid fa-list"></i>
+                                    Todos los servicios
+                                    <span class="badge-new">Ver todo</span>
+                                </a>
+                            </li>
+                        </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./index.html#nosotros">

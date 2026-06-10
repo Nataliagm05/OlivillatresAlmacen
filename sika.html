@@ -60,89 +60,64 @@
         }
 
         /* ========== NAVBAR PRINCIPAL ========== */
-        .navbar-custom {
-            background-color: #4a3b68;
-            padding: 0 30px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(74, 59, 104, 0.25);
-        }
+/* ========== NAVBAR OPCIÓN 1: Blanca con acento inferior ========== */
+.navbar-custom {
+    background-color: #4a3b68 !important;
+    border-bottom: 3px solid #b53987;
+    padding: 0 20px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
 
-        .navbar-custom .container-fluid {
-            padding: 0;
-        }
+.navbar-custom .navbar-brand {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-        /* Logo */
-        .logo-empresa {
-            height: 72px;
-            width: auto;
-            display: block;
-            border-radius: 4px;
-            transition: opacity 0.2s;
-        }
+/* Logo pequeño en móvil, más grande en escritorio */
+.logo-empresa {
+    height: 44px;
+    width: auto;
+    transition: height 0.2s;
+}
 
-        .logo-empresa:hover {
-            opacity: 0.88;
-        }
-
-        /* Nav items wrapper */
-        .navbar-custom .navbar-nav {
-            gap: 2px;
-        }
-
-        /* Cada ítem */
-        .navbar-custom .nav-item {
-            position: relative;
-        }
-
-        /* Links */
-        .navbar-custom .nav-link {
-            color: #dcd6e8 !important;
-            font-weight: 500;
-            font-size: 0.93rem;
-            letter-spacing: 0.02em;
-            padding: 24px 16px !important;
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            border-bottom: 3px solid transparent;
-            transition: color 0.2s, border-color 0.2s;
-            white-space: nowrap;
-        }
-
-        .navbar-custom .nav-link i {
-            font-size: 0.85rem;
-            opacity: 0.75;
-        }
-
-        .navbar-custom .nav-link:hover,
-        .navbar-custom .nav-link.active {
+.nav-link.active {
             color: #ffffff !important;
             border-bottom-color: #b53987;
         }
-
-        .navbar-custom .nav-link.active {
-            color: #f8c8e8 !important;
+.navbar-custom .nav-link.active {
+            color: #b53987 !important;
         }
 
-        /* Dropdown toggle arrow */
-        .navbar-custom .nav-link.dropdown-toggle::after {
-            border: none;
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            content: '\f107';
-            font-size: 0.7rem;
-            margin-left: 2px;
-            vertical-align: middle;
-            transition: transform 0.25s;
-        }
 
-        .navbar-custom .nav-item.show .nav-link.dropdown-toggle::after {
-            transform: rotate(180deg);
-        }
+@media (min-width: 992px) {
+    .logo-empresa {
+        height: 64px;
+    }
+}
 
-        /* ========== DROPDOWN MENU ========== */
+.logo-subtitulo {
+    font-size: 12px;
+    color: #b53987;
+    font-weight: 500;
+    border-left: 1px solid #ddd;
+    padding-left: 12px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.navbar-custom .nav-link {
+    color: #dcd6e8 !important;
+    font-weight: 400;
+    font-size: 14px;
+    /* En móvil: padding normal sin el truco del borde inferior */
+    padding: 12px 16px !important;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+/* ========== DROPDOWN MENU ========== */
         .navbar-custom .dropdown-menu {
             background-color: #ffffff;
             border: none;
@@ -200,98 +175,73 @@
             letter-spacing: 0.04em;
         }
 
-        /* ========== CTA BUTTON ========== */
-        .btn-presupuesto {
-            background-color: #b53987;
-            color: #ffffff !important;
-            font-size: 0.88rem;
-            font-weight: 600;
-            padding: 9px 20px !important;
-            border-radius: 6px;
-            border: none;
-            border-bottom: 3px solid transparent !important;
-            letter-spacing: 0.03em;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: background-color 0.2s, transform 0.15s;
-            white-space: nowrap;
-            margin-left: 12px;
-        }
+/* El subrayado inferior solo en escritorio, donde hay espacio */
+@media (min-width: 992px) {
+    .navbar-custom .nav-link {
+        padding: 24px 16px !important;
+        border-bottom: 3px solid transparent;
+        margin-bottom: -3px;
+        transition: color 0.2s, border-color 0.2s;
+    }
+}
 
-        .btn-presupuesto:hover {
-            background-color: #971f6b;
-            color: #fff !important;
-            transform: translateY(-1px);
-        }
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+    color: #b52a7c !important;
+}
 
-        /* ========== TOGGLER MÓVIL ========== */
-        .navbar-custom .navbar-toggler {
-            border: 1.5px solid #b53987;
-            padding: 6px 10px;
-            border-radius: 6px;
-        }
+.btn-nav-contacto {
+    background-color: #b53987 !important;
+    color: #ffffff !important;
+    border-radius: 6px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-bottom: none !important;
+    transition: background-color 0.2s !important;
+    /* En móvil ocupa todo el ancho */
+    padding: 10px 18px !important;
+    margin-top: 8px;
+    display: inline-block;
+}
 
-        .navbar-custom .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23b53987' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-        }
+@media (min-width: 992px) {
+    .btn-nav-contacto {
+        margin-top: 0;
+        margin-left: 8px;
+        padding: 8px 18px !important;
+    }
+}
 
-        /* ========== MOBILE adaptaciones ========== */
-        @media (max-width: 991px) {
-            .topbar { display: none; }
+.btn-nav-contacto:hover {
+    background-color: #4a3b68 !important;
+    color: #ffffff !important;
+}
 
-            .navbar-custom {
-                padding: 0 16px;
-            }
+.navbar-custom .dropdown-menu {
+    border-radius: 8px;
+    border: 1px solid rgba(74, 59, 104, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 3px;
+}
 
-            .navbar-custom .navbar-collapse {
-                background-color: #3d2f5e;
-                border-radius: 0 0 10px 10px;
-                padding: 10px 0 16px;
-                margin: 0 -16px;
-            }
+.navbar-custom .dropdown-item {
+    color: #4a3b68;
+    font-size: 14px;
+    font-weight: 400;
+}
 
-            .navbar-custom .nav-link {
-                padding: 12px 20px !important;
-                border-bottom: none;
-                border-left: 3px solid transparent;
-            }
+.navbar-custom .dropdown-item:hover {
+    background-color: #f7f9fa;
+    color: #b52a7c;
+}
 
-            .navbar-custom .nav-link:hover,
-            .navbar-custom .nav-link.active {
-                border-left-color: #b53987;
-                border-bottom-color: transparent;
-                background-color: rgba(181, 57, 135, 0.08);
-            }
+.navbar-custom .navbar-toggler {
+    border-color: #b53987 !important;
+}
 
-            .navbar-custom .dropdown-menu {
-                background-color: #2e2248;
-                border-top: none;
-                border-left: 3px solid #b53987;
-                border-radius: 0;
-                box-shadow: none;
-                margin-left: 20px;
-                padding: 4px 0;
-                animation: none;
-            }
-
-            .navbar-custom .dropdown-item {
-                color: #c9b8e8;
-                padding: 10px 16px;
-            }
-
-            .navbar-custom .dropdown-item:hover {
-                background-color: rgba(181, 57, 135, 0.15);
-                color: #f386cc;
-                padding-left: 22px;
-            }
-
-            .btn-presupuesto {
-                margin: 12px 20px 4px;
-                justify-content: center;
-            }
-        }
-
+.navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23b53987' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
         /* ========== RESTO DE ESTILOS (sin cambios) ========== */
         .container-custom {
             max-width: 900px;
@@ -462,47 +412,41 @@
         <a href="mailto:almacen@olivillatres.com"><i class="fa-solid fa-envelope"></i> almacen@olivillatres.com</a>
     </div>
     <!-- ===== NAVBAR PRINCIPAL ===== -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+            <img src="logonuevo2.png" class="logo-empresa" alt="Logo de Aislamientos Olivilla Tres">
+            <span class="logo-subtitulo">Almacén</span>
+        </a>
 
-            <a class="navbar-brand" href="./index.html">
-                <img src="logonuevo2.png" class="logo-empresa" alt="Logo Aislamientos Olivilla Tres">
-            </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarPrincipal"
-                aria-controls="navbarPrincipal"
-                aria-expanded="false"
-                aria-label="Abrir menú">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarPrincipal">
-                <ul class="navbar-nav mx-auto align-items-lg-stretch">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./index.html">
-                            <i class="fa-solid fa-house"></i> Inicio
-                        </a>
-                    </li>
-
-                    <li class="nav-item dropdown">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-stretch">
+                <li class="nav-item">
+                    <a class="nav-link active" href="./index.html">
+                        <i class="fa-solid fa-house me-1"></i>Inicio
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-trowel-bricks"></i> Servicios
+                            <i class="fa-solid fa-trowel-bricks"></i> Ferretería
                         </a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a class="dropdown-item" href="./index.html#termico">
                                     <i class="fa-solid fa-snowflake"></i>
-                                    Aislamiento Térmico
+                                    Brochas
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="./index.html#acustico">
                                     <i class="fa-solid fa-volume-xmark"></i>
-                                    Aislamiento Acústico
+                                    Discos
                                 </a>
                             </li>
                             <li><hr class="dropdown-divider"></li>
@@ -514,24 +458,21 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html#nosotros">
-                            <i class="fa-solid fa-building"></i> Nosotros
-                        </a>
-                    </li>
-
-
-                </ul>
-
-                <!-- CTA Presupuesto -->
-                <a href="./index.html#contacto" class="nav-link btn-presupuesto">
-                    <i class="fa-solid fa-file-invoice"></i> Solicitar presupuesto
-                </a>
-            </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html#nosotros">
+                        <i class="fa-solid fa-building me-1"></i>Nosotros
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn-nav-contacto" href="./formulario.html">
+                        <i class="fa-solid fa-phone me-1"></i>Solicitar Presupuesto
+                    </a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- ===== CONTENIDO PRINCIPAL ===== -->
     <div class="container-custom">
