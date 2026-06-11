@@ -30,6 +30,12 @@
             flex-direction: column;
         }
 
+        .logo-empresa {
+            height: 100px;
+            width: auto;
+            transition: height 0.2s;
+        }
+
         /* ========== TOPBAR ========== */
         .topbar {
             background-color: #35284f;
@@ -61,27 +67,32 @@
             background-color: #5a4878;
         }
 
+        .logo-subtitulo {
+            font-size: 15px;
+            color: #b53987;
+            font-weight: 500;
+            border-left: 1px solid #ddd;
+            padding-left: 12px;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+
         /* ========== NAVBAR OPCIÓN 1: Blanca con acento inferior ========== */
         .navbar-custom {
             background-color: #4a3b68 !important;
             border-bottom: 3px solid #b53987;
             padding: 0 20px;
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+            min-height: 110px;
         }
 
         .navbar-custom .navbar-brand {
-            padding: 8px 0;
+            padding: 10px 0;
             display: flex;
             align-items: center;
             gap: 12px;
         }
 
-        /* Logo pequeño en móvil, más grande en escritorio */
-        .logo-empresa {
-            height: 44px;
-            width: auto;
-            transition: height 0.2s;
-        }
 
         .nav-link.active {
             color: #ffffff !important;
@@ -92,22 +103,6 @@
             color: #b53987 !important;
         }
 
-
-        @media (min-width: 992px) {
-            .logo-empresa {
-                height: 64px;
-            }
-        }
-
-        .logo-subtitulo {
-            font-size: 12px;
-            color: #b53987;
-            font-weight: 500;
-            border-left: 1px solid #ddd;
-            padding-left: 12px;
-            letter-spacing: 0.3px;
-            white-space: nowrap;
-        }
 
         .navbar-custom .nav-link {
             color: #ffffff !important;
@@ -192,6 +187,7 @@
                 margin-bottom: -3px;
                 transition: color 0.2s, border-color 0.2s;
             }
+
         }
 
         .navbar-custom .nav-link:hover,

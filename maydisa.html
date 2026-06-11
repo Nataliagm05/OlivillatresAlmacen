@@ -61,7 +61,7 @@
             background-color: #5a4878;
         }
 
-        /* ========== NAVBAR OPCIÓN 1: Blanca con acento inferior ========== */
+        /* ========== NAVBAR ========== */
         .navbar-custom {
             background-color: #4a3b68 !important;
             border-bottom: 3px solid #b53987;
@@ -76,9 +76,9 @@
             gap: 12px;
         }
 
-        /* Logo pequeño en móvil, más grande en escritorio */
+        /* Logo más grande en móvil y escritorio */
         .logo-empresa {
-            height: 44px;
+            height: 100px;
             width: auto;
             transition: height 0.2s;
         }
@@ -92,15 +92,14 @@
             color: #b53987 !important;
         }
 
-
         @media (min-width: 992px) {
             .logo-empresa {
-                height: 64px;
+                height: 96px;
             }
         }
 
         .logo-subtitulo {
-            font-size: 12px;
+            font-size: 15px;
             color: #b53987;
             font-weight: 500;
             border-left: 1px solid #ddd;
@@ -113,7 +112,6 @@
             color: #ffffff !important;
             font-weight: 400;
             font-size: 14px;
-            /* En móvil: padding normal sin el truco del borde inferior */
             padding: 12px 16px !important;
             transition: color 0.2s;
             white-space: nowrap;
@@ -172,7 +170,6 @@
             margin: 6px 16px;
         }
 
-        /* Etiqueta badge en dropdown */
         .dropdown-item .badge-new {
             background-color: #b53987;
             color: #fff;
@@ -184,7 +181,6 @@
             letter-spacing: 0.04em;
         }
 
-        /* El subrayado inferior solo en escritorio, donde hay espacio */
         @media (min-width: 992px) {
             .navbar-custom .nav-link {
                 padding: 24px 16px !important;
@@ -207,7 +203,6 @@
             font-weight: 500 !important;
             border-bottom: none !important;
             transition: background-color 0.2s !important;
-            /* En móvil ocupa todo el ancho */
             padding: 10px 18px !important;
             margin-top: 8px;
             display: inline-block;
@@ -276,7 +271,6 @@
 
         /* ========== FIN NAVBAR ========== */
 
-        /* ========== RESTO DE ESTILOS (sin cambios) ========== */
         .container-custom {
             max-width: 900px;
             margin: 40px auto;
@@ -340,8 +334,6 @@
             margin-bottom: 0;
             font-size: .95rem;
         }
-
-
 
         /* ========== FOOTER ========== */
         .Contacto {
@@ -415,59 +407,17 @@
                             <i class="fa-solid fa-trowel-bricks"></i> Proveedores
                         </a>
                         <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="./sika.html">
-                                    Sika
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./bostik.html">
-                                    Bostik
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./grupopuma.html">
-                                    Grupopuma
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./ursa.html">
-                                    Ursa
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./regarsa.html">
-                                    Regarsa
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./soprema.html">
-                                    Soprema
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item active" href="./maydisa.html">
-                                    Maydisa
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./pladur.html">
-                                    Pladur
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./suimco.html">
-                                    Suimco
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./tripomat.html">
-                                    Tripomant
-                                </a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
+                            <li><a class="dropdown-item" href="./sika.html">Sika</a></li>
+                            <li><a class="dropdown-item" href="./bostik.html">Bostik</a></li>
+                            <li><a class="dropdown-item" href="./grupopuma.html">Grupopuma</a></li>
+                            <li><a class="dropdown-item" href="./ursa.html">Ursa</a></li>
+                            <li><a class="dropdown-item" href="./regarsa.html">Regarsa</a></li>
+                            <li><a class="dropdown-item" href="./soprema.html">Soprema</a></li>
+                            <li><a class="dropdown-item active" href="./maydisa.html">Maydisa</a></li>
+                            <li><a class="dropdown-item" href="./pladur.html">Pladur</a></li>
+                            <li><a class="dropdown-item" href="./suimco.html">Suimco</a></li>
+                            <li><a class="dropdown-item" href="./tripomat.html">Tripomant</a></li>
+                            <li><hr class="dropdown-divider"></li>
                             <li>
                                 <a class="dropdown-item" href="./todos.html">
                                     <i class="fa-solid fa-list"></i>
@@ -540,12 +490,10 @@
                         <p>
                             Soluciones para mejorar la eficiencia energética en viviendas,
                             edificios e instalaciones industriales. Materiales especializados para la reducción del
-                            ruido y la mejora
-                            del confort acústico.
+                            ruido y la mejora del confort acústico.
                         </p>
                     </div>
                 </div>
-
 
                 <div class="col-md-4">
                     <div class="categoria-card">
@@ -568,6 +516,7 @@
                         </p>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="categoria-card">
                         <img src="https://maydisa.com/wp-content/uploads/2024/05/Paneles-techos-acusticos-2.jpg"
@@ -588,6 +537,7 @@
                 </div>
 
             </div>
+
             <div class="alert alert-light border mt-4">
                 <strong>¿Busca un producto concreto?</strong><br>
                 Trabajamos bajo pedido con gran parte del catálogo MAYDISA.
