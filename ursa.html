@@ -61,6 +61,33 @@
             background-color: #5a4878;
         }
 
+        @media (max-width: 768px) {
+            .topbar {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 8px;
+                padding: 10px;
+            }
+
+            .topbar-divider {
+                display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .topbar {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .topbar-divider {
+                display: none;
+            }
+        }
+
         /* ========== NAVBAR ========== */
         .navbar-custom {
             background-color: #4a3b68 !important;
@@ -649,7 +676,7 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-trowel-bricks me-1"></i>Proveedores
                         </a>
@@ -701,14 +728,8 @@
                 <span>›</span>
                 <a href="#">Proveedores</a>
                 <span>›</span>
-                Bostik
+                Ursa
             </div>
-            <div class="proveedor-logo-wrap">
-                <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/images/Logos/Bostik_Logo_Header.svg"
-                    alt="Logo Bostik">
-            </div>
-            <h1>Productos Bostik</h1>
-            <p>Adhesivos, selladores y espumas de poliuretano para construcción y bricolaje</p>
         </div>
     </div>
     <!-- ===== CONTENIDO PRINCIPAL ===== -->

@@ -60,7 +60,32 @@
             height: 12px;
             background-color: #5a4878;
         }
+        @media (max-width: 768px) {
+            .topbar {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 8px;
+                padding: 10px;
+            }
 
+            .topbar-divider {
+                display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .topbar {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .topbar-divider {
+                display: none;
+            }
+        }
         /* ========== NAVBAR ========== */
         .navbar-custom {
             background-color: #4a3b68 !important;
@@ -527,7 +552,111 @@
         .aviso-mas-articulos a:hover {
             text-decoration: underline;
         }
+/* ========== CABECERA PROVEEDOR ========== */
+        .proveedor-hero {
+            background: linear-gradient(135deg, #35284f 0%, #4a3b68 60%, #5e3d7a 100%);
+            padding: 4px 0 24px;
+            border-bottom: 4px solid #b53987;
+            position: relative;
+            overflow: hidden;
+        }
 
+        .proveedor-hero::after {
+            content: '';
+            position: absolute;
+            right: -80px;
+            top: -80px;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: rgba(181, 57, 135, 0.08);
+        }
+
+        .proveedor-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .proveedor-breadcrumb {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .proveedor-breadcrumb a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .proveedor-breadcrumb a:hover {
+            color: #f386cc;
+        }
+
+        .proveedor-breadcrumb span {
+            margin: 0 6px;
+        }
+
+        .proveedor-logo-wrap {
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 12px;
+            padding: 14px 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .proveedor-logo-wrap img {
+            height: 42px;
+            width: auto;
+        }
+
+        .proveedor-hero h1 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .proveedor-hero p {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .titulo-proveedor {
+            color: #b53987;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            font-size: 2rem;
+            /* Bajado un poco para que quepa mejor en móviles */
+            font-weight: bold;
+            border-left: 6px solid #4a3b68;
+            padding-left: 15px;
+
+            /* --- FLEXBOX MEJORADO --- */
+            display: flex;
+            flex-direction: column;
+            /* En móvil: el logo arriba, el texto abajo */
+            align-items: flex-start;
+            gap: 10px;
+            /* Espacio controlado entre logo y texto */
+        }
+
+        /* Cuando la pantalla sea de tablet o computadora (escritorio) */
+        @media (min-width: 576px) {
+            .titulo-proveedor {
+                flex-direction: row;
+                /* Se ponen en fila horizontal */
+                align-items: center;
+                /* Se centran verticalmente */
+                font-size: 2.3rem;
+                /* Recupera el tamaño grande */
+                gap: 20px;
+            }
+        }
         /* ========== FOOTER ========== */
         .footer-main {
             background-color: #4a3b68;
@@ -645,7 +774,7 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-trowel-bricks me-1"></i>Proveedores
                         </a>
@@ -689,7 +818,7 @@
             </div>
         </div>
     </nav>
-    <!-- ===== CABECERA PROVEEDOR ===== -->
+ <!-- ===== CABECERA PROVEEDOR ===== -->
     <div class="proveedor-hero">
         <div class="container">
             <div class="proveedor-breadcrumb">
@@ -697,14 +826,8 @@
                 <span>›</span>
                 <a href="#">Proveedores</a>
                 <span>›</span>
-                Bostik
+                Tripomant
             </div>
-            <div class="proveedor-logo-wrap">
-                <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/images/Logos/Bostik_Logo_Header.svg"
-                    alt="Logo Bostik">
-            </div>
-            <h1>Productos Bostik</h1>
-            <p>Adhesivos, selladores y espumas de poliuretano para construcción y bricolaje</p>
         </div>
     </div>
     <!-- ===== CONTENIDO PRINCIPAL ===== -->
