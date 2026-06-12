@@ -17,7 +17,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        html, body {
+        html,
+        body {
             height: 100%;
         }
 
@@ -39,7 +40,8 @@
             gap: 20px;
         }
 
-        .topbar a, .topbar span {
+        .topbar a,
+        .topbar span {
             color: #c9b8e8;
             font-size: 0.78rem;
             text-decoration: none;
@@ -49,7 +51,9 @@
             transition: color 0.2s;
         }
 
-        .topbar a:hover { color: #f386cc; }
+        .topbar a:hover {
+            color: #f386cc;
+        }
 
         .topbar .topbar-divider {
             width: 1px;
@@ -62,7 +66,7 @@
             background-color: #4a3b68 !important;
             border-bottom: 3px solid #b53987;
             padding: 0 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
         }
 
         .navbar-custom .navbar-brand {
@@ -72,20 +76,23 @@
             gap: 12px;
         }
 
-        .logo-empresa { height: 70px; width: auto; }
+        .logo-empresa {
+            height: 70px;
+            width: auto;
+        }
 
         .logo-subtitulo {
             font-size: 14px;
             color: #e8b0d0;
             font-weight: 500;
-            border-left: 1px solid rgba(255,255,255,0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
             padding-left: 12px;
             letter-spacing: 0.3px;
             white-space: nowrap;
         }
 
         .navbar-custom .nav-link {
-            color: rgba(255,255,255,0.85) !important;
+            color: rgba(255, 255, 255, 0.85) !important;
             font-weight: 400;
             font-size: 14px;
             padding: 12px 14px !important;
@@ -118,15 +125,22 @@
             border: none;
             border-top: 3px solid #b53987;
             border-radius: 0 0 10px 10px;
-            box-shadow: 0 12px 32px rgba(74,59,104,0.18);
+            box-shadow: 0 12px 32px rgba(74, 59, 104, 0.18);
             padding: 8px 0;
             min-width: 220px;
             animation: dropFade 0.15s ease;
         }
 
         @keyframes dropFade {
-            from { opacity: 0; transform: translateY(-6px); }
-            to   { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .navbar-custom .dropdown-item {
@@ -192,12 +206,16 @@
             }
         }
 
-        .btn-nav-contacto:hover { background-color: #922f6d !important; }
+        .btn-nav-contacto:hover {
+            background-color: #922f6d !important;
+        }
 
-        .navbar-custom .navbar-toggler { border-color: #b53987 !important; }
+        .navbar-custom .navbar-toggler {
+            border-color: #b53987 !important;
+        }
 
         .navbar-custom .navbar-toggler:focus {
-            box-shadow: 0 0 0 0.2rem rgba(181,57,135,0.4) !important;
+            box-shadow: 0 0 0 0.2rem rgba(181, 57, 135, 0.4) !important;
         }
 
         .navbar-custom .navbar-toggler-icon {
@@ -221,36 +239,43 @@
             width: 320px;
             height: 320px;
             border-radius: 50%;
-            background: rgba(181,57,135,0.08);
+            background: rgba(181, 57, 135, 0.08);
         }
 
-        .proveedor-hero .container { position: relative; z-index: 1; }
+        .proveedor-hero .container {
+            position: relative;
+            z-index: 1;
+        }
 
         .proveedor-breadcrumb {
             font-size: 0.78rem;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
             margin-bottom: 20px;
         }
 
         .proveedor-breadcrumb a {
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
             text-decoration: none;
             transition: color 0.2s;
         }
 
-        .proveedor-breadcrumb a:hover { color: #f386cc; }
+        .proveedor-breadcrumb a:hover {
+            color: #f386cc;
+        }
 
-        .proveedor-breadcrumb span { margin: 0 6px; }
+        .proveedor-breadcrumb span {
+            margin: 0 6px;
+        }
 
         .proveedor-logo-wrap {
-            background: rgba(255,255,255,0.97);
+            background: rgba(255, 255, 255, 0.97);
             border-radius: 12px;
             padding: 14px 24px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .proveedor-logo-wrap img {
@@ -266,9 +291,41 @@
         }
 
         .proveedor-hero p {
-            color: rgba(255,255,255,0.65);
+            color: rgba(255, 255, 255, 0.65);
             font-size: 0.95rem;
             margin: 0;
+        }
+
+        .titulo-proveedor {
+            color: #b53987;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            font-size: 2rem;
+            /* Bajado un poco para que quepa mejor en móviles */
+            font-weight: bold;
+            border-left: 6px solid #4a3b68;
+            padding-left: 15px;
+
+            /* --- FLEXBOX MEJORADO --- */
+            display: flex;
+            flex-direction: column;
+            /* En móvil: el logo arriba, el texto abajo */
+            align-items: flex-start;
+            gap: 10px;
+            /* Espacio controlado entre logo y texto */
+        }
+
+        /* Cuando la pantalla sea de tablet o computadora (escritorio) */
+        @media (min-width: 576px) {
+            .titulo-proveedor {
+                flex-direction: row;
+                /* Se ponen en fila horizontal */
+                align-items: center;
+                /* Se centran verticalmente */
+                font-size: 2.3rem;
+                /* Recupera el tamaño grande */
+                gap: 20px;
+            }
         }
 
         /* ========== CARRUSEL ========== */
@@ -279,7 +336,7 @@
         .carousel-inner {
             border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 8px 30px rgba(74,59,104,0.15);
+            box-shadow: 0 8px 30px rgba(74, 59, 104, 0.15);
             background-color: #4a3b68;
         }
 
@@ -292,7 +349,7 @@
         }
 
         .carousel-caption {
-            background: rgba(30,20,50,0.75);
+            background: rgba(30, 20, 50, 0.75);
             border-radius: 8px;
             padding: 12px 18px;
             backdrop-filter: blur(4px);
@@ -307,22 +364,27 @@
         .carousel-caption p {
             font-size: 0.83rem;
             margin: 0;
-            color: rgba(255,255,255,0.8);
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .carousel-control-prev,
         .carousel-control-next {
             width: 44px;
             height: 44px;
-            background: rgba(181,57,135,0.75);
+            background: rgba(181, 57, 135, 0.75);
             border-radius: 50%;
             top: 50%;
             transform: translateY(-50%);
             margin: 0 12px;
         }
 
-        .carousel-control-prev { left: 0; }
-        .carousel-control-next { right: 0; }
+        .carousel-control-prev {
+            left: 0;
+        }
+
+        .carousel-control-next {
+            right: 0;
+        }
 
         .carousel-indicators [data-bs-target] {
             background-color: #b53987;
@@ -332,7 +394,9 @@
             border-radius: 50%;
         }
 
-        .carousel-indicators .active { opacity: 1; }
+        .carousel-indicators .active {
+            opacity: 1;
+        }
 
         /* ========== SECCIÓN CATÁLOGO ========== */
         .seccion-catalogo {
@@ -379,7 +443,7 @@
         .card-producto:hover {
             transform: translateY(-5px);
             border-color: #b53987;
-            box-shadow: 0 12px 30px rgba(181,57,135,0.12);
+            box-shadow: 0 12px 30px rgba(181, 57, 135, 0.12);
         }
 
         .card-producto .img-wrap {
@@ -450,14 +514,18 @@
             margin-top: 4px;
         }
 
-        .btn-ver-mas:hover { color: #922f6d; }
+        .btn-ver-mas:hover {
+            color: #922f6d;
+        }
 
         .btn-ver-mas i {
             font-size: 0.7rem;
             transition: transform 0.2s;
         }
 
-        .btn-ver-mas.abierto i { transform: rotate(180deg); }
+        .btn-ver-mas.abierto i {
+            transform: rotate(180deg);
+        }
 
         /* Especificaciones como badges */
         .specs-wrap {
@@ -487,7 +555,7 @@
             display: flex;
             align-items: flex-start;
             gap: 24px;
-            box-shadow: 0 8px 30px rgba(74,59,104,0.25);
+            box-shadow: 0 8px 30px rgba(74, 59, 104, 0.25);
         }
 
         .aviso-mas-articulos .aviso-icono {
@@ -506,7 +574,7 @@
         .aviso-mas-articulos p {
             margin: 0 0 6px;
             font-size: 0.9rem;
-            color: rgba(255,255,255,0.8);
+            color: rgba(255, 255, 255, 0.8);
             line-height: 1.65;
         }
 
@@ -516,19 +584,21 @@
             text-decoration: none;
         }
 
-        .aviso-mas-articulos a:hover { text-decoration: underline; }
+        .aviso-mas-articulos a:hover {
+            text-decoration: underline;
+        }
 
         /* ========== FOOTER ========== */
         .footer-main {
             background-color: #4a3b68;
-            color: rgba(255,255,255,0.8);
+            color: rgba(255, 255, 255, 0.8);
             padding: 50px 0 0;
             margin-top: auto;
         }
 
         .footer-brand p {
             font-size: 0.88rem;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             margin-top: 12px;
             line-height: 1.65;
         }
@@ -542,18 +612,25 @@
             margin-bottom: 16px;
         }
 
-        .footer-links { list-style: none; padding: 0; }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
 
-        .footer-links li { margin-bottom: 8px; }
+        .footer-links li {
+            margin-bottom: 8px;
+        }
 
         .footer-links a {
-            color: rgba(255,255,255,0.65);
+            color: rgba(255, 255, 255, 0.65);
             text-decoration: none;
             font-size: 0.88rem;
             transition: color 0.2s;
         }
 
-        .footer-links a:hover { color: #f386cc; }
+        .footer-links a:hover {
+            color: #f386cc;
+        }
 
         .footer-contact-item {
             display: flex;
@@ -561,7 +638,7 @@
             gap: 10px;
             margin-bottom: 12px;
             font-size: 0.88rem;
-            color: rgba(255,255,255,0.65);
+            color: rgba(255, 255, 255, 0.65);
         }
 
         .footer-contact-item i {
@@ -572,12 +649,14 @@
         }
 
         .footer-contact-item a {
-            color: rgba(255,255,255,0.65);
+            color: rgba(255, 255, 255, 0.65);
             text-decoration: none;
             transition: color 0.2s;
         }
 
-        .footer-contact-item a:hover { color: #f386cc; }
+        .footer-contact-item a:hover {
+            color: #f386cc;
+        }
 
         .footer-bottom {
             background-color: #35284f;
@@ -587,7 +666,7 @@
 
         .footer-bottom p {
             font-size: 0.82rem;
-            color: rgba(255,255,255,0.45);
+            color: rgba(255, 255, 255, 0.45);
             margin: 0;
             text-align: center;
         }
@@ -614,8 +693,8 @@
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -627,7 +706,8 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             <i class="fa-solid fa-trowel-bricks me-1"></i>Proveedores
                         </a>
                         <ul class="dropdown-menu">
@@ -641,7 +721,9 @@
                             <li><a class="dropdown-item" href="./pladur.html">Pladur</a></li>
                             <li><a class="dropdown-item" href="./suimco.html">Suimco</a></li>
                             <li><a class="dropdown-item" href="./tripomat.html">Tripomant</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -680,7 +762,8 @@
                 Bostik
             </div>
             <div class="proveedor-logo-wrap">
-                <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/images/Logos/Bostik_Logo_Header.svg" alt="Logo Bostik">
+                <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/images/Logos/Bostik_Logo_Header.svg"
+                    alt="Logo Bostik">
             </div>
             <h1>Productos Bostik</h1>
             <p>Adhesivos, selladores y espumas de poliuretano para construcción y bricolaje</p>
@@ -689,35 +772,45 @@
 
     <!-- ===== CONTENIDO ===== -->
     <main class="container" style="padding-top: 0; flex: 1;">
-
+        <h1 class="titulo-proveedor">
+            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/images/Logos/Bostik_Logo_Header.svg" alt="Logo Ursa"
+                style="height: 50px; width: auto; vertical-align: middle; margin-right: 12px;">
+            Productos de Bostik
+        </h1>
         <!-- CARRUSEL -->
         <div class="seccion-carrusel">
             <div id="carruselProductos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/Bostik-spain-productimage-p925-fijacion-turbo-640x480.jpg" class="d-block w-100" alt="P925 Poliespuma Fijación Turbo">
+                        <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/Bostik-spain-productimage-p925-fijacion-turbo-640x480.jpg"
+                            class="d-block w-100" alt="P925 Poliespuma Fijación Turbo">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>P925 Poliespuma Fijación Turbo</h5>
                             <p>Adhesivo de espuma de poliuretano de fijación rápida.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-msp-turbo-640x480.jpg" class="d-block w-100" alt="MSP Turbo">
+                        <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-msp-turbo-640x480.jpg"
+                            class="d-block w-100" alt="MSP Turbo">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>MSP Turbo</h5>
                             <p>Adhesivo de montaje y sellador MSP de alto agarre inmediato.</p>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carruselProductos" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselProductos"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Anterior</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carruselProductos" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselProductos"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Siguiente</span>
                 </button>
@@ -737,7 +830,8 @@
                 <div class="col">
                     <div class="card-producto">
                         <div class="img-wrap">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-a310-acril-grietas-640x480.jpg" alt="A310 Acril Grietas">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-a310-acril-grietas-640x480.jpg"
+                                alt="A310 Acril Grietas">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">A310 Acril Grietas</h5>
@@ -752,13 +846,16 @@
                 <div class="col">
                     <div class="card-producto">
                         <div class="img-wrap">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-p795-poliuretano-premium-640x480.jpg" alt="P795 Poliuretano Premium">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-p795-poliuretano-premium-640x480.jpg"
+                                alt="P795 Poliuretano Premium">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">P795 Poliuretano Premium</h5>
                             <p class="card-desc">
-                                <span class="card-desc-short">Sellador de poliuretano de nueva generación, curado rápido y bajo MDI.</span>
-                                <span class="card-desc-extra">Duradero y con altas prestaciones, monocomponente y fácil de usar.</span>
+                                <span class="card-desc-short">Sellador de poliuretano de nueva generación, curado rápido
+                                    y bajo MDI.</span>
+                                <span class="card-desc-extra">Duradero y con altas prestaciones, monocomponente y fácil
+                                    de usar.</span>
                             </p>
                             <div class="specs-wrap card-desc-extra">
                                 <span class="spec-badge">Marrón</span>
@@ -775,13 +872,16 @@
                 <div class="col">
                     <div class="card-producto">
                         <div class="img-wrap">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/import-spain/contact-1454-poliestireno_372x240.jpg" alt="Contact 1454 Poliestireno">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/import-spain/contact-1454-poliestireno_372x240.jpg"
+                                alt="Contact 1454 Poliestireno">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Contact 1454 Poliestireno</h5>
                             <p class="card-desc">
-                                <span class="card-desc-short">Para el pegado de poliestireno expandido y rígido entre sí o sobre todo tipo de soportes.</span>
-                                <span class="card-desc-extra">Indicado para zócalos y placas decorativas, corcho, aislamientos y trabajos manuales.</span>
+                                <span class="card-desc-short">Para el pegado de poliestireno expandido y rígido entre sí
+                                    o sobre todo tipo de soportes.</span>
+                                <span class="card-desc-extra">Indicado para zócalos y placas decorativas, corcho,
+                                    aislamientos y trabajos manuales.</span>
                             </p>
                             <button class="btn-ver-mas" onclick="toggleExtra(this)">
                                 Ver más <i class="fa-solid fa-chevron-down"></i>
@@ -799,8 +899,11 @@
                         <div class="card-body">
                             <h5 class="card-title">Contact 1465 Cola Contacto Multiusos</h5>
                             <p class="card-desc">
-                                <span class="card-desc-short">Uniones fuertes y duraderas entre todo tipo de materiales: poliéster, corcho, caucho, metal, textil...</span>
-                                <span class="card-desc-extra">Indicado para estratificados, paneles acústicos, contrachapados y tapicería. Ideal para pavimentos ligeros (moquetas, corcho, caucho, PVC, linoleum) sobre todo tipo de soportes.</span>
+                                <span class="card-desc-short">Uniones fuertes y duraderas entre todo tipo de materiales:
+                                    poliéster, corcho, caucho, metal, textil...</span>
+                                <span class="card-desc-extra">Indicado para estratificados, paneles acústicos,
+                                    contrachapados y tapicería. Ideal para pavimentos ligeros (moquetas, corcho, caucho,
+                                    PVC, linoleum) sobre todo tipo de soportes.</span>
                             </p>
                             <div class="specs-wrap card-desc-extra">
                                 <span class="spec-badge">Bote 500 ml</span>
@@ -816,12 +919,14 @@
                 <div class="col">
                     <div class="card-producto">
                         <div class="img-wrap">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-h505-msp-cristal-640x480.jpg" alt="H505 MSP Cristal">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-h505-msp-cristal-640x480.jpg"
+                                alt="H505 MSP Cristal">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">H505 MSP Cristal</h5>
                             <p class="card-desc">
-                                <span class="card-desc-short">Adhesivo-sellador universal transparente de altas prestaciones.</span>
+                                <span class="card-desc-short">Adhesivo-sellador universal transparente de altas
+                                    prestaciones.</span>
                             </p>
                         </div>
                     </div>
@@ -831,12 +936,14 @@
                 <div class="col">
                     <div class="card-producto">
                         <div class="img-wrap">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/import-spain/limpiador-espuma_372x240.jpg" alt="Limpiador Espumas">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/import-spain/limpiador-espuma_372x240.jpg"
+                                alt="Limpiador Espumas">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Limpiador Espumas</h5>
                             <p class="card-desc">
-                                <span class="card-desc-short">Para la limpieza de la pistola aplicadora y otras superficies, siempre que la espuma esté fresca.</span>
+                                <span class="card-desc-short">Para la limpieza de la pistola aplicadora y otras
+                                    superficies, siempre que la espuma esté fresca.</span>
                             </p>
                         </div>
                     </div>
@@ -846,12 +953,14 @@
                 <div class="col">
                     <div class="card-producto">
                         <div class="img-wrap">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-msp-h750-premium-640x480.jpg" alt="MSP H750 Premium">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-msp-h750-premium-640x480.jpg"
+                                alt="MSP H750 Premium">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">MSP H750 Premium</h5>
                             <p class="card-desc">
-                                <span class="card-desc-short">Adhesivo sellador de alta calidad que no mancha los materiales.</span>
+                                <span class="card-desc-short">Adhesivo sellador de alta calidad que no mancha los
+                                    materiales.</span>
                             </p>
                             <div class="specs-wrap">
                                 <span class="spec-badge">Marrón</span>
@@ -866,12 +975,14 @@
                 <div class="col">
                     <div class="card-producto">
                         <div class="img-wrap">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-msp-turbo-640x480.jpg" alt="MSP Turbo">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-msp-turbo-640x480.jpg"
+                                alt="MSP Turbo">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">MSP Turbo</h5>
                             <p class="card-desc">
-                                <span class="card-desc-short">Adhesivo de montaje y sellador MSP de alto agarre inmediato. Apto para superficies húmedas. Multimaterial.</span>
+                                <span class="card-desc-short">Adhesivo de montaje y sellador MSP de alto agarre
+                                    inmediato. Apto para superficies húmedas. Multimaterial.</span>
                             </p>
                         </div>
                     </div>
@@ -881,12 +992,14 @@
                 <div class="col">
                     <div class="card-producto">
                         <div class="img-wrap">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/Bostik-spain-productimage-p301-poliespuma-multiusos-640x480.jpg" alt="P301 Poliespuma Multiusos">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/Bostik-spain-productimage-p301-poliespuma-multiusos-640x480.jpg"
+                                alt="P301 Poliespuma Multiusos">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">P301 Poliespuma Multiusos</h5>
                             <p class="card-desc">
-                                <span class="card-desc-short">Poliespuma de poliuretano para fijación, relleno, sellado y aislamiento en construcción.</span>
+                                <span class="card-desc-short">Poliespuma de poliuretano para fijación, relleno, sellado
+                                    y aislamiento en construcción.</span>
                             </p>
                             <div class="specs-wrap">
                                 <span class="spec-badge">Pistola</span>
@@ -900,12 +1013,14 @@
                 <div class="col">
                     <div class="card-producto">
                         <div class="img-wrap">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/Bostik-spain-productimage-p501-poliespuma-tejas-640x480.jpg" alt="P501 Poliespuma Tejas">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/Bostik-spain-productimage-p501-poliespuma-tejas-640x480.jpg"
+                                alt="P501 Poliespuma Tejas">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">P501 Poliespuma Tejas</h5>
                             <p class="card-desc">
-                                <span class="card-desc-short">Poliespuma de poliuretano especial para el pegado de tejas.</span>
+                                <span class="card-desc-short">Poliespuma de poliuretano especial para el pegado de
+                                    tejas.</span>
                             </p>
                             <div class="specs-wrap">
                                 <span class="spec-badge">Pistola</span>
@@ -919,7 +1034,8 @@
                 <div class="col">
                     <div class="card-producto">
                         <div class="img-wrap">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/Bostik-spain-productimage-p605-poliespuma-640x480.jpg" alt="P605 Poliespuma Ultraflexible">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/Bostik-spain-productimage-p605-poliespuma-640x480.jpg"
+                                alt="P605 Poliespuma Ultraflexible">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">P605 Poliespuma Ultraflexible</h5>
@@ -937,12 +1053,14 @@
                 <div class="col">
                     <div class="card-producto">
                         <div class="img-wrap">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/Bostik-spain-productimage-p925-fijacion-turbo-640x480.jpg" alt="P925 Poliespuma Fijación Turbo">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/Bostik-spain-productimage-p925-fijacion-turbo-640x480.jpg"
+                                alt="P925 Poliespuma Fijación Turbo">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">P925 Poliespuma Fijación Turbo</h5>
                             <p class="card-desc">
-                                <span class="card-desc-short">Adhesivo de espuma de poliuretano de fijación rápida.</span>
+                                <span class="card-desc-short">Adhesivo de espuma de poliuretano de fijación
+                                    rápida.</span>
                             </p>
                             <div class="specs-wrap">
                                 <span class="spec-badge">Pistola</span>
@@ -955,13 +1073,16 @@
                 <div class="col">
                     <div class="card-producto">
                         <div class="img-wrap">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/import-spain/bodegn_on-taco-qui_mico-cartucho_372x240.jpg" alt="Taco Químico">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/import-spain/bodegn_on-taco-qui_mico-cartucho_372x240.jpg"
+                                alt="Taco Químico">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Taco Químico</h5>
                             <p class="card-desc">
-                                <span class="card-desc-short">Anclaje químico de resina bicomponente para fijaciones de cargas medias y altas.</span>
-                                <span class="card-desc-extra">Ideal para barras reforzadas, estructuras de acero, persianas, barandillas, rejillas y similares.</span>
+                                <span class="card-desc-short">Anclaje químico de resina bicomponente para fijaciones de
+                                    cargas medias y altas.</span>
+                                <span class="card-desc-extra">Ideal para barras reforzadas, estructuras de acero,
+                                    persianas, barandillas, rejillas y similares.</span>
                             </p>
                             <button class="btn-ver-mas" onclick="toggleExtra(this)">
                                 Ver más <i class="fa-solid fa-chevron-down"></i>
@@ -974,7 +1095,8 @@
                 <div class="col">
                     <div class="card-producto">
                         <div class="img-wrap">
-                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-waterstop-espray-640x480.jpg" alt="WaterStop Espray Reparador Multiusos">
+                            <img src="https://www.bostik.com/files/live/sites/shared_bostik/files/Images/Spain/Products/C%26C/bostik-spain-productimage-waterstop-espray-640x480.jpg"
+                                alt="WaterStop Espray Reparador Multiusos">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">WaterStop Espray Reparador Multiusos</h5>
@@ -994,7 +1116,9 @@
                 </div>
                 <div>
                     <h4><i class="fa-solid fa-circle-info me-2"></i>¿No encuentras lo que buscas?</h4>
-                    <p>Este catálogo muestra una selección de nuestros productos Bostik más habituales en tienda, pero disponemos de <strong>muchos más artículos</strong> que podemos pedir directamente. Consúltanos sin compromiso.</p>
+                    <p>Este catálogo muestra una selección de nuestros productos Bostik más habituales en tienda, pero
+                        disponemos de <strong>muchos más artículos</strong> que podemos pedir directamente. Consúltanos
+                        sin compromiso.</p>
                     <p class="mt-2">
                         <i class="fa-solid fa-phone me-1"></i> <strong>925 23 34 54</strong> &nbsp;|&nbsp;
                         <i class="fa-solid fa-envelope me-1"></i>
@@ -1011,8 +1135,10 @@
         <div class="container">
             <div class="row g-4 pb-4">
                 <div class="col-lg-4 col-md-6 footer-brand">
-                    <img src="logonuevo2.png" alt="Olivilla Tres" style="height:55px; filter:brightness(0) invert(1); opacity:0.85; margin-bottom:10px;">
-                    <p>Suministro de materiales de construcción, aislamiento e impermeabilización en Toledo. Asesoramiento técnico especializado.</p>
+                    <img src="logonuevo2.png" alt="Olivilla Tres"
+                        style="height:55px; filter:brightness(0) invert(1); opacity:0.85; margin-bottom:10px;">
+                    <p>Suministro de materiales de construcción, aislamiento e impermeabilización en Toledo.
+                        Asesoramiento técnico especializado.</p>
                 </div>
                 <div class="col-lg-2 col-md-6">
                     <p class="footer-heading">Navegación</p>
@@ -1094,4 +1220,5 @@
     </script>
 
 </body>
+
 </html>
